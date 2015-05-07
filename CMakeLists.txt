@@ -7,5 +7,5 @@ set(VERSION 0.1-alpha)
 
 add_definitions(-std=c++11)
 
-add_subdirectory(documentation) # doxygen documentation
+add_subdirectory(Documentation) # doxygen documentation
 add_subdirectory(src)
