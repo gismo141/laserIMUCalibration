@@ -7,10 +7,9 @@ set(VERSION 0.1-alpha)
 
 add_definitions(-std=c++11)
 
-<<<<<<< HEAD
 add_subdirectory(Documentation) # doxygen documentation
 add_subdirectory(src)
-=======
+
 if( APPLE )
 	set(PROGNAME laserIMUCalibration)
 	# set(MACOSX_BUNDLE_ICON_FILE ${PROGNAME}.icns )
@@ -65,4 +64,3 @@ endif(APPLE)
 
 target_link_libraries(${PROGNAME} ${QT_LIBRARIES} ${PCL_LIBRARIES} ${PROGNAME}Lib)
 qt5_use_modules(${PROGNAME} Widgets)
->>>>>>> Renamed Documentation-folder
