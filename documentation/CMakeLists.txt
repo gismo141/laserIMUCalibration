@@ -1,4 +1,3 @@
-# add a target to generate API documentation with Doxygen
 find_package(Doxygen)
 if(DOXYGEN_FOUND)
 	add_custom_target(doc ALL
