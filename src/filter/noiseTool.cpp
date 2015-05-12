@@ -1,3 +1,7 @@
+/**
+ * Copyright 2015 <michael.r141@gmail.com>
+ */
+
 #include "filter/noiseTool.h"
 
 // add noise to cloud

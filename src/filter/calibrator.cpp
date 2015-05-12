@@ -1,4 +1,10 @@
+/**
+* Copyright 2015 <michael.r141@gmail.com>
+*/
+
 #include "filter/calibrator.h"
+
+#include <vector>
 
 void dip::filter::calibrator::setupICP(
   pcl::IterativeClosestPoint<PointT, PointT>* icp,
@@ -14,15 +20,15 @@ void dip::filter::calibrator::setupICP(
 }
 
 void dip::filter::calibrator::toEuler(Eigen::Matrix4f matrix) {
-  float x, y, z, roll, pitch, yaw;
+  float x, y, z, phi, theta, psi;
 
   pcl::getTranslationAndEulerAngles(Eigen::Affine3f(matrix),
-                                    x, y, z, roll, pitch, yaw);
+                                    x, y, z, phi, theta, psi);
   printf("Translation vector :\n");
   printf("t = < %6.3f, %6.3f, %6.3f >\n", x, y, z);
   printf("Rotation vector :\n");
-  printf("r = < %6.3f, %6.3f, %6.3f >\n\n", pcl::rad2deg(roll),
-         pcl::rad2deg(pitch), pcl::rad2deg(yaw));
+  printf("r = < %6.3f, %6.3f, %6.3f >\n\n", pcl::rad2deg(phi),
+         pcl::rad2deg(theta), pcl::rad2deg(psi));
 }
 
 void dip::filter::calibrator::printTransformation(

@@ -1,5 +1,9 @@
-#ifndef CALIBRATOR_H
-#define CALIBRATOR_H
+/**
+ * Copyright 2015 <michael.r141@gmail.com>
+ */
+
+#ifndef _CALIBRATOR_H
+#define _CALIBRATOR_H
 
 #include <pcl/registration/icp.h>
 #include <pcl/io/pcd_io.h>
@@ -24,7 +28,7 @@ class calibrator {
   static void toEuler(Eigen::Matrix4f matrix);
   static int32_t calibrateLaserPose(char* argv[]);
 };
-} // filter
-} // dip
+}  // namespace filter
+}  // namespace dip
 
-#endif // CALIBRATOR_H
+#endif  // _CALIBRATOR_H

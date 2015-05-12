@@ -1,3 +1,6 @@
+/**
+ * Copyright 2015 <michael.r141@gmail.com>
+ */
 #ifndef NOISE_TOOL_H
 #define NOISE_TOOL_H
 
@@ -14,12 +17,13 @@ class noiseTool {
   noiseTool(/* args */) = default;
   static void addNoise(PointCloudT::Ptr cloud, float noise);
   static void removeNoise(pcl::StatisticalOutlierRemoval<PointT>* sor,
-                          PointCloudT::Ptr cloud_noised, PointCloudT::Ptr cloud_cleaned);
+                          PointCloudT::Ptr cloud_noised,
+                          PointCloudT::Ptr cloud_cleaned);
   static void translateCloud(PointCloudT::Ptr cloud,
                              Eigen::Vector3f translationXYZ);
 };
-} // filter
-} // dip
+}  // namespace filter
+}  // namespace dip
 
 
-#endif // NOISE_TOOL_H
+#endif  // NOISE_TOOL_H

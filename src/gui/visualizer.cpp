@@ -1,4 +1,9 @@
+/**
+ * Copyright 2015 <michael.r141@gmail.com>
+ */
+
 #include "gui/visualizer.h"
+#include <vector>
 
 void gui::visualizer::print4x4Matrix(const Eigen::Matrix4d& matrix) {
   printf("Rotation matrix :\n");

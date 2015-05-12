@@ -62,5 +62,10 @@ else(APPLE)
 	)
 endif(APPLE)
 
+add_executable(
+	${PROGNAME}_noBundle main.cpp ${_SRCS} ${_MOC_SRCS}
+)
+
 target_link_libraries(${PROGNAME} ${QT_LIBRARIES} ${PCL_LIBRARIES} ${PROGNAME}Lib)
+target_link_libraries(${PROGNAME}_noBundle ${QT_LIBRARIES} ${PCL_LIBRARIES} ${PROGNAME}Lib)
 qt5_use_modules(${PROGNAME} Widgets)

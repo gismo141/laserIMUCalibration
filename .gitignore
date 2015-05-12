@@ -1,4 +1,5 @@
-build/
+documentation/html
+documentation/xml
 res/
 
 .DS_Store

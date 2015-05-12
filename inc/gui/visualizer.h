@@ -1,7 +1,11 @@
+/**
+ * Copyright 2015 <michael.r141@gmail.com>
+ */
 #ifndef VISUALIZER_H
 #define VISUALIZER_H
 
 #include <pcl/visualization/pcl_visualizer.h>
+#include <vector>
 
 typedef pcl::PointXYZ PointT;
 typedef pcl::PointCloud<PointT> PointCloudT;
@@ -22,6 +26,6 @@ class visualizer {
   static void setupVisualizer(pcl::visualization::PCLVisualizer* viewer,
                               std::vector<int>* viewports);
 };
-} // gui
+}  // namespace gui
 
-#endif // VISUALIZER_H
+#endif  // VISUALIZER_H
