@@ -7,9 +7,6 @@ set(VERSION 0.1-alpha)
 
 add_definitions(-std=c++11)
 
-add_subdirectory(Documentation) # doxygen documentation
-add_subdirectory(src)
-
 if( APPLE )
 	set(PROGNAME laserIMUCalibration)
 	# set(MACOSX_BUNDLE_ICON_FILE ${PROGNAME}.icns )
@@ -34,7 +31,10 @@ add_subdirectory(Documentation) # doxygen documentation
 add_subdirectory(src)			# create library
 
 set(_MOC_HDRS					# moc all headers
-	inc/*.h)
+	inc/object/dataTypes.h
+	inc/filter/calibrator.h
+	inc/filter/noiseTool.h
+	inc/gui/visualizer.h)
 
 qt5_wrap_cpp(_MOC_SRCS ${_MOC_HDRS})
 

@@ -2,14 +2,19 @@
  * Copyright 2015 <michael.r141@gmail.com>
  */
 
-#include <QApplication>
+// #include <QApplication>
 
-#include "view/laserIMUCalibration.h"
+#include "filter/calibrator.h"
 
 int main(int argc, char* argv[]) {
-  QApplication app(argc, argv);
-  laserIMUCalibration mainWindow;
-  mainWindow.show();
+  if (argc < 3) {
+    return 1;
+  }
 
-  return app.exec();
+  return dip::filter::calibrator::calibrateLaserPose(argv);
+  // QApplication app(argc, argv);
+  // laserIMUCalibration mainWindow;
+  // mainWindow.show();
+
+  // return app.exec();
 }
