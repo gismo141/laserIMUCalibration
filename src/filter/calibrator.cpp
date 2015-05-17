@@ -5,18 +5,38 @@
 #include "filter/calibrator.h"
 
 #include <vector>
+#include <string>
+#include <fstream>
 
-void dip::filter::calibrator::setupICP(
-  pcl::IterativeClosestPoint<PointT, PointT>* icp,
-  PointCloudT::Ptr cloud_1, PointCloudT::Ptr cloud_2) {
-  icp->setRANSACOutlierRejectionThreshold(1.1);
-  icp->setRANSACIterations(20);
-  icp->setMaxCorrespondenceDistance(5);
-  icp->setMaximumIterations(1);
-  icp->setTransformationEpsilon(1e-8);
-  icp->setEuclideanFitnessEpsilon(1e-3);
-  icp->setInputCloud(cloud_1);
-  icp->setInputTarget(cloud_2);
+dip::filter::calibrator::calibrator():
+  scan1(new PointCloudT),
+  scan2(new PointCloudT),
+  transformation(new PointCloudT) {}
+
+dip::filter::calibrator::calibrator(std::string scan1, std::string scan2):
+  scan1FN(scan1),
+  scan2FN(scan2),
+  scan1(new PointCloudT),
+  scan2(new PointCloudT),
+  transformation(new PointCloudT) {
+  if (pcl::io::loadPCDFile<PointT>(scan1FN, *this->scan1) == -1) {
+    PCL_ERROR("Couldn't read file %s\n", scan1FN.c_str());
+  }
+
+  if (pcl::io::loadPCDFile<PointT>(scan2FN, *this->scan2) == -1) {
+    PCL_ERROR("Couldn't read file %s\n", scan2FN.c_str());
+  }
+}
+
+void dip::filter::calibrator::setupICP(void) {
+  icp.setRANSACOutlierRejectionThreshold(1.1);
+  icp.setRANSACIterations(20);
+  icp.setMaxCorrespondenceDistance(5);
+  icp.setMaximumIterations(1);
+  icp.setTransformationEpsilon(1e-8);
+  icp.setEuclideanFitnessEpsilon(1e-3);
+  icp.setInputCloud(scan1);
+  icp.setInputTarget(scan2);
 }
 
 void dip::filter::calibrator::toEuler(Eigen::Matrix4f matrix) {
@@ -31,42 +51,100 @@ void dip::filter::calibrator::toEuler(Eigen::Matrix4f matrix) {
          pcl::rad2deg(theta), pcl::rad2deg(psi));
 }
 
-void dip::filter::calibrator::printTransformation(
-  pcl::IterativeClosestPoint<PointT, PointT>* icp) {
-  if (icp->hasConverged()) {
+void dip::filter::calibrator::printTransformation(void) {
+  if (icp.hasConverged()) {
     std::cout << std::endl
-              << "ICP converged: " << icp->getFitnessScore()
+              << "ICP converged: " << icp.getFitnessScore()
               << std::endl << std::endl;
   }
 }
 
-int32_t dip::filter::calibrator::calibrateLaserPose(char* argv[]) {
-  PointCloudT::Ptr scan1(new PointCloudT);
-  PointCloudT::Ptr scan2(new PointCloudT);
-  PointCloudT::Ptr transformation(new PointCloudT);
+void dip::filter::calibrator::printTransformation(std::string path) {
+  if (icp.hasConverged()) {
+    std::ofstream outputFile;
+    outputFile.open(path, std::ios_base::app);
+    outputFile << scan1FN << ";"
+               << scan2FN << ";"
+               << icp.getFitnessScore() << "\n";
+  }
+}
 
-  if (pcl::io::loadPCDFile<PointT>(argv[1], *scan1) == -1) {
-    PCL_ERROR("Couldn't read file %s\n", argv[1]);
-    return (-1);
+int32_t dip::filter::calibrator::plotICPErrors(
+  std::vector<std::string>* files, uint32_t milliseconds) {
+  uint32_t iterations = 0;
+
+  for (std::string file : *files) {
+    if (pcl::io::loadPCDFile<PointT>(file, *scan1) == -1) {
+      PCL_ERROR("Couldn't read file %s\n", file.c_str());
+      return (-1);
+    }
+
+    uint32_t nextScan = iterations + milliseconds;
+
+    if (nextScan < (*files).size()) {
+      std::string compareTo = (*files)[nextScan];
+
+      if (pcl::io::loadPCDFile<PointT>(compareTo, *scan2) == -1) {
+        PCL_ERROR("Couldn't read file %s\n", file.c_str());
+        return (-1);
+      }
+
+      scan1FN = file;
+      scan2FN = compareTo;
+      setupICP();
+      icp.align(*transformation);
+      std::string filename = "icp_fitness_"
+                             + std::to_string(milliseconds)
+                             + ".csv";
+      printTransformation(filename);
+      std::cout << "\r" << ++iterations * 100 / (*files).size() << std::flush;
+
+    } else {
+      break;
+    }
   }
 
-  if (pcl::io::loadPCDFile<PointT>(argv[2], *scan2) == -1) {
-    PCL_ERROR("Couldn't read file %s\n", argv[2]);
-    return (-1);
+  return (0);
+}
+
+int32_t dip::filter::calibrator::scanFlight(std::vector<std::string>* files) {
+  pcl::visualization::PCLVisualizer viewer("Laser Flight");
+  std::vector<int> viewports = {0};
+  gui::visualizer::setupVisualizer(&viewer, &viewports);
+  uint32_t firstTime = 1;
+
+  for (std::string file : *files) {
+    if (pcl::io::loadPCDFile<PointT>(file, *scan1) == -1) {
+      PCL_ERROR("Couldn't read file %s\n", file.c_str());
+      return (-1);
+    }
+
+    if (firstTime) {
+      gui::visualizer::setupViewerContent(scan1, &viewer, &viewports);
+      --firstTime;
+
+    } else {
+      viewer.updatePointCloud(scan1, "scan1V1");
+    }
+
+    viewer.spinOnce();
   }
 
-  pcl::IterativeClosestPoint<PointT, PointT> icp;
-  setupICP(&icp, scan1, scan2);
-  icp.align(*transformation);
-  printTransformation(&icp);
-  toEuler(icp.getFinalTransformation());
+  return (0);
+}
 
+int32_t dip::filter::calibrator::calibrateLaserPose(void) {
   pcl::visualization::PCLVisualizer viewer("Laser -> IMU Calibration");
   std::vector<int> viewports = {0, 0};
   gui::visualizer::setupVisualizer(&viewer, &viewports);
+
+  setupICP();
+  icp.align(*transformation);
+  printTransformation();
+  toEuler(icp.getFinalTransformation());
+
   gui::visualizer::setupViewerContent(scan1, scan2, transformation, &viewer,
                                       &viewports);
-  viewer.spin();
-
+  viewer.spinOnce();
   return (0);
 }

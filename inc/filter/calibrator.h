@@ -11,6 +11,9 @@
 #include <pcl/common/eigen.h>
 #include <pcl/common/angles.h>
 
+#include <vector>
+#include <string>
+
 #include "gui/visualizer.h"
 
 typedef pcl::PointXYZ PointT;
@@ -19,14 +22,22 @@ namespace dip {
 namespace filter {
 class calibrator {
  private:
+  pcl::IterativeClosestPoint<PointT, PointT> icp;
+  std::string scan1FN, scan2FN;
+  PointCloudT::Ptr scan1;
+  PointCloudT::Ptr scan2;
+  PointCloudT::Ptr transformation;
  public:
-  calibrator(/* args */) = default;
-  static void setupICP(pcl::IterativeClosestPoint<PointT, PointT>* icp,
-                       PointCloudT::Ptr cloud_1, PointCloudT::Ptr cloud_2);
-  static void printTransformation(pcl::IterativeClosestPoint<PointT, PointT>*
-                                  icp);
-  static void toEuler(Eigen::Matrix4f matrix);
-  static int32_t calibrateLaserPose(char* argv[]);
+  calibrator();
+  calibrator(std::string scan1, std::string scan2);
+  void setupICP(void);
+  void printTransformation(void);
+  void printTransformation(std::string path);
+  void toEuler(Eigen::Matrix4f matrix);
+  int32_t plotICPErrors(std::vector<std::string>* files,
+                        uint32_t milliseconds);
+  int32_t scanFlight(std::vector<std::string>* files);
+  int32_t calibrateLaserPose(void);
 };
 }  // namespace filter
 }  // namespace dip

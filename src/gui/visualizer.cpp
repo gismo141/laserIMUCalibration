@@ -42,6 +42,17 @@ void gui::visualizer::setupVisualizer(pcl::visualization::PCLVisualizer* viewer,
 }
 
 void gui::visualizer::setupViewerContent(PointCloudT::Ptr scan1,
+    pcl::visualization::PCLVisualizer* viewer,
+    std::vector<int>* viewports) {
+  PCLColorT white(scan1, static_cast<int>(255) * txtGray
+                  , static_cast<int>(255) * txtGray
+                  , static_cast<int>(255) * txtGray);
+  viewer->addPointCloud(scan1, white, "scan1V1", (*viewports)[0]);
+  viewer->setPointCloudRenderingProperties(
+    pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "scan1V1");
+}
+
+void gui::visualizer::setupViewerContent(PointCloudT::Ptr scan1,
     PointCloudT::Ptr scan2,
     PointCloudT::Ptr transformation,
     pcl::visualization::PCLVisualizer* viewer,

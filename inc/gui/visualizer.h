@@ -19,6 +19,9 @@ class visualizer {
  public:
   visualizer(/* args */) = default;
   static void print4x4Matrix(const Eigen::Matrix4d& matrix);
+  static void setupViewerContent(PointCloudT::Ptr scan1,
+                                 pcl::visualization::PCLVisualizer* viewer,
+                                 std::vector<int>* viewports);
   static void setupViewerContent(PointCloudT::Ptr scan1, PointCloudT::Ptr scan2,
                                  PointCloudT::Ptr transformation,
                                  pcl::visualization::PCLVisualizer* viewer,
