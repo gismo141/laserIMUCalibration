@@ -59,18 +59,26 @@ void dip::filter::calibrator::printTransformation(void) {
   }
 }
 
+std::string dip::filter::calibrator::parseTimestamp(std::string text) {
+  std::string purge = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_./";
+  text.erase(0, text.find_first_not_of(purge));
+  text.replace(10, 1, ".");
+  text.erase(17, 22);
+  return text;
+}
+
 void dip::filter::calibrator::printTransformation(std::string path) {
   if (icp.hasConverged()) {
     std::ofstream outputFile;
     outputFile.open(path, std::ios_base::app);
-    outputFile << scan1FN << ";"
-               << scan2FN << ";"
+    outputFile << parseTimestamp(scan1FN) << ";"
+               << parseTimestamp(scan2FN) << ";"
                << icp.getFitnessScore() << "\n";
   }
 }
 
-int32_t dip::filter::calibrator::plotICPErrors(
-  std::vector<std::string>* files, uint32_t milliseconds) {
+int32_t dip::filter::calibrator::plotICPScore(
+  std::vector<std::string>* files, uint32_t seconds) {
   uint32_t iterations = 0;
 
   for (std::string file : *files) {
@@ -79,7 +87,7 @@ int32_t dip::filter::calibrator::plotICPErrors(
       return (-1);
     }
 
-    uint32_t nextScan = iterations + milliseconds;
+    uint32_t nextScan = iterations + (seconds * 10);
 
     if (nextScan < (*files).size()) {
       std::string compareTo = (*files)[nextScan];
@@ -94,10 +102,11 @@ int32_t dip::filter::calibrator::plotICPErrors(
       setupICP();
       icp.align(*transformation);
       std::string filename = "icp_fitness_"
-                             + std::to_string(milliseconds)
+                             + std::to_string(seconds)
                              + ".csv";
       printTransformation(filename);
-      std::cout << "\r" << ++iterations * 100 / (*files).size() << std::flush;
+      std::cout << "\r" << ++iterations * 100 / (*files).size() << "%"
+                << std::flush;
 
     } else {
       break;
@@ -128,6 +137,7 @@ int32_t dip::filter::calibrator::scanFlight(std::vector<std::string>* files) {
     }
 
     viewer.spinOnce();
+    std::cout << "\r" << parseTimestamp(file) << std::flush;
   }
 
   return (0);

@@ -31,11 +31,12 @@ class calibrator {
   calibrator();
   calibrator(std::string scan1, std::string scan2);
   void setupICP(void);
+  std::string parseTimestamp(std::string text);
   void printTransformation(void);
   void printTransformation(std::string path);
   void toEuler(Eigen::Matrix4f matrix);
-  int32_t plotICPErrors(std::vector<std::string>* files,
-                        uint32_t milliseconds);
+  int32_t plotICPScore(std::vector<std::string>* files,
+                       uint32_t seconds);
   int32_t scanFlight(std::vector<std::string>* files);
   int32_t calibrateLaserPose(void);
 };

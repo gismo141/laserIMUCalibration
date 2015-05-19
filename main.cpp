@@ -27,14 +27,19 @@ std::vector<std::string> open(std::string path = ".") {
 }
 
 int main(int argc, char* argv[]) {
-  if (argc < 3) {
+  if (argc < 2) {
     return 1;
   }
 
-  std::vector<std::string> files = open(argv[2]);
+  std::vector<std::string> files = open(argv[1]);
   dip::filter::calibrator calib;
-  return calib.scanFlight(&files);
-  // return calib.plotICPErrors(&files, atoi(argv[1]));
+
+  if (argc == 2) {
+    return calib.scanFlight(&files);
+
+  } else {
+    return calib.plotICPScore(&files, atoi(argv[2]));
+  }
 
   // return dip::filter::calibrator::calibrateLaserPose();
 }
