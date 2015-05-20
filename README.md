@@ -71,3 +71,35 @@ When everything went as it should, you will have two binaries in the build-folde
 - `laserIMUCalibration_noBundle`
 
 The `*.app`-Bundle is used as the GUI-Binary while the other should be used with the commandline. This behaviour will be changed after implementing a sufficient GUI.
+
+# Usage
+
+## Fly through mutliple LiDAR-scans
+
+```Shell
+./laserIMUCalibration_noBundle <PATH_TO_FOLDER_WITH_PCD_FILES>
+```
+
+This opens the interactive VTK-visualizer with consecutive presentation of each LiDAR-scan. The use can move, rotate and scale the scene with the mouse.
+
+### Planned Improvements
+
+- Implement a slider to show specific scans
+- Activate different filters on-the-fly
+
+## Plot the ICP-fitnessscore for different intervals
+
+```Shell
+./laserIMUCalibration_noBundle <PATH_TO_FOLDER_WITH_PCD_FILES> <INTERVAL_BETWEEN_SCANS>
+```
+
+This launches the ICP-algorithm and calculates the transformation between every LiDAR-scan and its `<INTERVAL_BETWEEN_SCANS>` successor. To give a little feedback on the calculation-intensive task there is a small percentage-indicator that represents the amount of processed scans divided by the total. While processing the program writes its results in a file in the folder where the program was launched. The filename is: `icp_fitness_<INTERVAL_BETWEEN_SCANS>.csv`. The contents are separated by semicolons (;). The first row is the unix-timestamp of the first scan, the second row is the unix-timestamp of the second scan and the third is the ICP-fitnessscore. The fitnessscore is according to the [PCL](http://docs.pointclouds.org/trunk/classpcl_1_1_registration.html#ab26742c383b6f5e86fb96a236fb08728) the sum of the squared distances divided by its total.
+
+An example `icp_fitness_1.csv` may look like:
+
+```csv
+1412242263.910747;1412242264.910452;0.135022
+1412242264.010833;1412242265.010031;0.288052
+1412242264.110734;1412242265.109657;0.107826
+1412242264.210728;1412242265.209419;0.256894
+```
