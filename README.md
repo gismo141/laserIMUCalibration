@@ -1,26 +1,26 @@
 # Automated LiDAR-IMU Calibration with ICP
 
-This program is part of my [mastersthesis](https://github.com/gismo141/mastersthesis).
+I wrote his program as part of my [mastersthesis](https://github.com/gismo141/mastersthesis).
 
-The objective is to provide an automated calibration method that uses movement data collected by Inertial Measurement Units (IMU)-sensors to calibrate the mounting-pose of a Light Detection and Ranging (LiDAR)-scanner.
+This provides an automated calibration method that uses movement data collected by Inertial Measurement Units (IMU)-sensors to calibrate the mounting-pose of a Light Detection and Ranging (LiDAR)-scanner.
 
 ## Background
 
-Autonomous systems are meant to solve tasks that are dangerous or boring for humans. Algorithms where implemented to mimic human-actions. The basis for those actions is the ability to sense the environment. Optical sensors like cameras or LiDAR are used to generate different features of the environment. IMU composed of Gyroscopes and Global Positioning Systems (GPS) are used to determine the pose and position in multidimensional spaces.
+Autonomous systems solve dangerous or boring tasks via different algorithms to mimic human-actions. Optical sensors like cameras or LiDAR enable the system to sense the environment and to extract different features of the environment. IMU-Systems determine its pose and position in multidimensional spaces with gyroscopes and accelerometers.
 
-To generate a close representation of the real world, multiple sensors are used at the same time. The combination of their data is called Sensor-Fusion. Sensor-Fusion enables the system to evaluate actions according to the actual situation, even if some sensors deliver faulty inputs which are compensated by others. The basis for effective Sensor-Fusion is concrete knowledge about the sensor and its pose and position on the autonomous system. Only then it is possible to transform the collected data into a common coordinatesystem.
+Multiple sensors, used as a sensor-system, generate a close representation of the real world, called Sensor-Fusion. Sensor-Fusion enables the system to evaluate actions according to the actual situation and compensate single faulty sensors. Effective Sensor-Fusion needs concrete knowledge about the sensors and their pose and position on the carrier, the autonomous system. The autonomous system then combines the calibrated sensor-data in a common coordinate-system.
 
-Due to the different constructions, missions and load-configurations of Autonomous Systems it is nearly impossible and tedious to calibrate the system by hand.
+The plethora of different constructions, missions and load-configurations of Autonomous Systems makes it difficult to calibrate the sensors by human-hand.
 
 ## Approach
 
-The Incremental Closest Point (ICP)-Algorithm is used to detect the carriers movement between successive LiDAR-scans. The ICP returns a transformation between both scans and an error or fitness-score. The transformation is then compared to the collected data by the IMU. Because the LiDAR and the IMU are mounted fixed on the same carrier - the difference between both, the ICP-calculated and the IMU-measured movement, is supposed to be the miscalibration in the LiDARs pose and position.
+The Incremental Closest Point (ICP)-Algorithm registers a model point-cloud with a target point-cloud and returns the transformation and an error- or fitness-score. We us de ICP-Algorithm to detect the carriers movement between successive LiDAR-scans. We then compare the transformation calculated by the ICP with the collected movement data by the IMU. If a difference between both occurs, we use that information as new calibration-input for the LiDARs pose and position.
 
-The calculated difference is then added to the old pose and position information and the process continues. We suppose, that with multiple iterations it should be possible to determine the nearly correct pose and position.
+We suppose, that with multiple iterations it should be possible to determine the nearly correct pose and position between the LiDAR and the IMU.  
 
 ## Implementation
 
-This repository contains the developed reaserch code. It is meant to be used standalone to evaluate different approaches. The implementation uses Qt5 for a Graphical User Interface (GUI), VTK for algorithm visualisation and the Point-Cloud-Library (PCL) for pointcloud management and different algorithms.
+This repository contains the developed research code. The implementation uses Qt5 for a Graphical User Interface (GUI), VTK for algorithm visualisation and the Point-Cloud-Library (PCL) for pointcloud management and different algorithms.
 
 # Installation
 
@@ -28,7 +28,7 @@ This repository contains the developed reaserch code. It is meant to be used sta
 
 **PLEASE READ THE COMPLETE SECTION BEFORE THE INSTALLATION**
 
-For Max OS X it is proposed to use [Homebrew](http://brew.sh) for the installation of the the software and its dependencies.
+To install the software and its dependencies on Mac OS X, use the package manger [Homebrew](http://brew.sh).
 
 After the installation of Homebrew you should install the software according to the table [#tab:needed-software].
 
@@ -43,7 +43,7 @@ Table: Needed software with its options {#tab:needed-software}
 | GraphViz | 2.38.0  |                      |
 | Doxygen  | 1.8.9.1 |                      |
 
-The command-line-syntax for the installation with Homebrew is:
+Homebrews command-line-syntax:
 
 ```Shell
 brew install <Package> [Options]
@@ -70,8 +70,6 @@ When everything went as it should, you will have two binaries in the build-folde
 - `laserIMUCalibration.app`
 - `laserIMUCalibration_noBundle`
 
-The `*.app`-Bundle is used as the GUI-Binary while the other should be used with the commandline. This behaviour will be changed after implementing a sufficient GUI.
-
 # Usage
 
 ## Fly through mutliple LiDAR-scans
@@ -93,7 +91,7 @@ This opens the interactive VTK-visualizer with consecutive presentation of each 
 ./laserIMUCalibration_noBundle <PATH_TO_FOLDER_WITH_PCD_FILES> <INTERVAL_BETWEEN_SCANS>
 ```
 
-This launches the ICP-algorithm and calculates the transformation between every LiDAR-scan and its `<INTERVAL_BETWEEN_SCANS>` successor. To give a little feedback on the calculation-intensive task there is a small percentage-indicator that represents the amount of processed scans divided by the total. While processing the program writes its results in a file in the folder where the program was launched. The filename is: `icp_fitness_<INTERVAL_BETWEEN_SCANS>.csv`. The contents are separated by semicolons (;). The first row is the unix-timestamp of the first scan, the second row is the unix-timestamp of the second scan and the third is the ICP-fitnessscore. The fitnessscore is according to the [PCL](http://docs.pointclouds.org/trunk/classpcl_1_1_registration.html#ab26742c383b6f5e86fb96a236fb08728) the sum of the squared distances divided by its total.
+This launches the ICP-algorithm and calculates the transformation between every LiDAR-scan and its `<INTERVAL_BETWEEN_SCANS>` successor. A small percentage-indicator represents the amount of processed scans divided by the total to provide a little feedback on the calculation-intensive task. While processing, the program writes its results to the semicolon-separated-file `icp_fitness_<INTERVAL_BETWEEN_SCANS>.csv` in the executed folder. The first row is the unix-timestamp of the first scan, the second row is the unix-timestamp of the second scan and the third is the ICP-fitnessscore. The fitnessscore is according to the [PCL](http://docs.pointclouds.org/trunk/classpcl_1_1_registration.html#ab26742c383b6f5e86fb96a236fb08728) the sum of the squared distances divided by its total.
 
 An example `icp_fitness_1.csv` may look like:
 
