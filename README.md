@@ -55,6 +55,14 @@ e.g. for VTK:
 brew install vtk --with-qt5 --c++11
 ```
 
+## Fix for CMake and Qt5
+
+This is copied from the [wireshark-documentation]().
+
+```Shell
+brew link --force qt5 && ln -s /usr/local/Cellar/qt5/5.4.1/mkspecs /usr/local/mkspecs && ln -s /usr/local/Cellar/qt5/5.4.1/plugins /usr/local/plugins
+```
+
 ## Compilation
 
 ```Shell
