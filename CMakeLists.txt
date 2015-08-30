@@ -1,71 +1,39 @@
 cmake_minimum_required(VERSION 2.8.11 FATAL_ERROR)
 
-project(laserIMUCalibration)
+project(laserNAVCalibration)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(VERSION 0.1-alpha)
 
-add_definitions(-std=c++11)
-
-if( APPLE )
-	set(PROGNAME laserIMUCalibration)
-	# set(MACOSX_BUNDLE_ICON_FILE ${PROGNAME}.icns )
-	set(MACOSX_BUNDLE_SHORT_VERSION_STRING VERSION )
-    set(MACOSX_BUNDLE_VERSION VERSION )
-    set(MACOSX_BUNDLE_LONG_VERSION_STRING Version VERSION )
-else( APPLE )
-	set(PROGNAME laserIMUCalibration)
-endif( APPLE )
-
-find_package(Qt5Core REQUIRED)
-find_package(VTK REQUIRED)
-find_package(PCL 1.2 REQUIRED)
+find_package(PCL 1.7.2 REQUIRED COMPONENTS common io registration features surface filters)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-include_directories("inc")
+set(CMAKE_CXX_FLAGS "")
+add_definitions(-Wall)
 
-add_subdirectory(Documentation) # doxygen documentation
-add_subdirectory(src)			# create library
+set(PCL_ALL_REQUIRED_LIBRARIES
+	${PCL_COMMON_LIBRARIES}
+	${PCL_IO_LIBRARIES}
+	${PCL_REGISTRATION_LIBRARIES}
+	${PCL_FEATURES_LIBRARIES}
+	${PCL_FILTERS_LIBRARIES}
+	${PCL_SURFACE_LIBRARIES})
 
-set(_MOC_HDRS					# moc all headers
-	inc/object/dataTypes.h
-	inc/filter/calibrator.h
-	inc/filter/noiseTool.h
-	inc/gui/visualizer.h)
+list(REMOVE_ITEM PCL_ALL_REQUIRED_LIBRARIES "debug")
+list(REMOVE_ITEM PCL_ALL_REQUIRED_LIBRARIES "optimized")
 
-qt5_wrap_cpp(_MOC_SRCS ${_MOC_HDRS})
+set(Boost_USE_STATIC_LIBS ON)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME ON)
 
-if(APPLE)
-	add_executable(
-		${PROGNAME} MACOSX_BUNDLE main.cpp ${_SRCS} ${_MOC_SRCS}
-	)
-    add_custom_command(TARGET ${PROGNAME} POST_BUILD
-    	command mkdir ARGS -p
-    	${CMAKE_CURRENT_BINARY_DIR}/${PROGNAME}.app/Contents/Resources
-    	command cp ARGS
-    	../${MACOSX_BUNDLE_ICON_FILE}
-    	${CMAKE_CURRENT_BINARY_DIR}/${PROGNAME}.app/Contents/Resources
-    	command cp ARGS
-    	../*.md
-    	${CMAKE_CURRENT_BINARY_DIR}/${PROGNAME}.app/Contents/Resources
-    )
-elseif(WIN32)
-	add_executable(
-		${PROGNAME} WIN32 main.cpp ${_SRCS} ${_MOC_SRCS}
-	)
-else(APPLE)
-	add_executable(
-		${PROGNAME} main.cpp ${_SRCS} ${_MOC_SRCS}
-	)
-endif(APPLE)
+find_package(Boost 1.49 COMPONENTS system filesystem REQUIRED)
 
-add_executable(
-	${PROGNAME}_noBundle main.cpp ${_SRCS} ${_MOC_SRCS}
-)
+include_directories(${Boost_INCLUDE_DIRS})
 
-target_link_libraries(${PROGNAME} ${QT_LIBRARIES} ${PCL_LIBRARIES} ${PROGNAME}Lib)
-target_link_libraries(${PROGNAME}_noBundle ${QT_LIBRARIES} ${PCL_LIBRARIES} ${PROGNAME}Lib)
-qt5_use_modules(${PROGNAME} Widgets)
+# doxygen documentation
+add_subdirectory(Documentation)
+
+add_executable(laserNAVCalibration main.cpp mathConstants.cpp pointcloudRegistration.cpp lmmin.c laserNAVCalib.cpp)
+target_link_libraries(laserNAVCalibration ${CMAKE_CXX_FLAGS} ${PCL_ALL_REQUIRED_LIBRARIES} ${Boost_LIBRARIES})

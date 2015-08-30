@@ -3,3 +3,4 @@ documentation/xml
 res/
 
 .DS_Store
+.MACOSX-fcfs.upd
