@@ -1,8 +1,9 @@
 <map id="filter::LaserNAVCalibration::update" name="filter::LaserNAVCalibration::update">
-<area shape="rect" id="node2" href="$lmmin_8c.html#a82fc1e216d4f18aa79db07a8528fc581" title="Levenberg&#45;Marquardt minimization. " alt="" coords="231,54,288,80"/>
-<area shape="rect" id="node3" href="$lmmin_8c.html#af783493b9875c983d0234f9b170c476b" title="Refined calculation of Eucledian norm. " alt="" coords="486,78,566,104"/>
-<area shape="rect" id="node4" href="$lmmin_8c.html#ac41fd3078587553ec6e990362d78f114" title="lm_print_pars" alt="" coords="336,29,438,54"/>
-<area shape="rect" id="node5" href="$lmmin_8c.html#aa91e8d8bef32a26b967d117801308566" title="[brief description] " alt="" coords="350,78,423,104"/>
-<area shape="rect" id="node6" href="$lmmin_8c.html#a41ff931f50f8eaa282b7fe5fbc035030" title="[brief description] " alt="" coords="349,128,425,153"/>
-<area shape="rect" id="node7" href="$lmmin_8c.html#a0543234dc4a8534dffcec238a778916a" title="[brief description] " alt="" coords="487,128,565,153"/>
+<area shape="rect" id="node2" href="$lmmin_8c.html#a82fc1e216d4f18aa79db07a8528fc581" title="Levenberg&#45;Marquardt minimization. " alt="" coords="291,52,348,77"/>
+<area shape="rect" id="node8" href="$classfilter_1_1_laser_n_a_v_calibration.html#ac06ae8f4d4d84aa6b9a1e79fa9900061" title="Optimized the mounting&#45;pose as part of the Levenberg&#45;Marquardt. " alt="" coords="231,101,408,140"/>
+<area shape="rect" id="node3" href="$lmmin_8c.html#af783493b9875c983d0234f9b170c476b" title="Refined calculation of Eucledian norm. " alt="" coords="606,77,687,102"/>
+<area shape="rect" id="node4" href="$lmmin_8c.html#ac41fd3078587553ec6e990362d78f114" title="lm_print_pars" alt="" coords="456,28,558,53"/>
+<area shape="rect" id="node5" href="$lmmin_8c.html#aa91e8d8bef32a26b967d117801308566" title="[brief description] " alt="" coords="471,77,544,102"/>
+<area shape="rect" id="node6" href="$lmmin_8c.html#a41ff931f50f8eaa282b7fe5fbc035030" title="[brief description] " alt="" coords="469,126,545,152"/>
+<area shape="rect" id="node7" href="$lmmin_8c.html#a0543234dc4a8534dffcec238a778916a" title="[brief description] " alt="" coords="607,126,686,152"/>
 </map>

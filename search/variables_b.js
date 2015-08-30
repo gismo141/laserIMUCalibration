@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['userbreak',['userbreak',['../structlm__status__struct.html#ab7516bd52767f6179c49880005f725be',1,'lm_status_struct']]]
+  ['outcome',['outcome',['../structlm__status__struct.html#a2f898dcae3cc29eead870093eaa4eeb3',1,'lm_status_struct']]]
 ];

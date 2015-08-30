@@ -1,0 +1,10 @@
+<map id="filter::LaserNAVCalibration::getScanTransformationFrom" name="filter::LaserNAVCalibration::getScanTransformationFrom">
+<area shape="rect" id="node2" href="$namespacefilter.html#a27b0fbc7a35c648ec87de31f3daaf6cb" title="Simple Voxel&#45;Grid downsampling. " alt="" coords="290,5,419,31"/>
+<area shape="rect" id="node3" href="$namespacefilter.html#a949c96958681d0d128f62277cb58caf5" title="Use bilateral filtering. " alt="" coords="280,55,428,80"/>
+<area shape="rect" id="node4" href="$namespacefilter.html#ab418fe3942489440318998156d38f219" title="Compute the surface normals. " alt="" coords="254,104,455,129"/>
+<area shape="rect" id="node5" href="$namespacefilter.html#a359fe6b0257903f751d7f6f93544aa72" title="Use covariances for downsampling. " alt="" coords="251,153,457,179"/>
+<area shape="rect" id="node6" href="$namespacefilter.html#ac782fb8f7fc2cf0849a30363bae33b6a" title="Extracts all (F)PFHs. " alt="" coords="278,203,430,241"/>
+<area shape="rect" id="node7" href="$namespacefilter.html#a2374739be2b3d046774a6d06a859a779" title="Aligns the point&#45;clouds initially using Sample Consensus. " alt="" coords="282,265,426,291"/>
+<area shape="rect" id="node8" href="$namespacefilter.html#a1f7f22c338d410b69fa3c4842944c1ef" title="Calls the pcl iterativeClosestPoint&#45;algorithm. " alt="" coords="505,341,576,367"/>
+<area shape="rect" id="node9" href="$namespacefilter.html#a2f75a4eae842e965ce75e1e141c387aa" title="Calls the pcl iterativeClosestPoint&#45;algorithm levenberg&#45;marquardt alternative (internally) ..." alt="" coords="309,367,399,392"/>
+</map>

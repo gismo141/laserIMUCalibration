@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['setbilateralfiltering',['setBilateralFiltering',['../classfilter_1_1_laser_n_a_v_calibration.html#afb4e4b8089072aea23c5c32bb2f0a964',1,'filter::LaserNAVCalibration']]],
-  ['setcalculatenormals',['setCalculateNormals',['../classfilter_1_1_laser_n_a_v_calibration.html#a5a1ae050b2b2967caea1806fbbab1b79',1,'filter::LaserNAVCalibration']]],
-  ['setcovariancesampling',['setCovarianceSampling',['../classfilter_1_1_laser_n_a_v_calibration.html#a45a5dbe5ab06e4fd1f4a504c84673e62',1,'filter::LaserNAVCalibration']]],
-  ['setdownsampling',['setDownsampling',['../classfilter_1_1_laser_n_a_v_calibration.html#a542518452946c70df7eff64fdf403335',1,'filter::LaserNAVCalibration']]],
-  ['setinitialaligning',['setInitialAligning',['../classfilter_1_1_laser_n_a_v_calibration.html#ae78f727b21e75cf0a7198176dc892edb',1,'filter::LaserNAVCalibration']]],
-  ['setscansbetweenlastandlatest',['setScansBetweenLastAndLatest',['../classfilter_1_1_laser_n_a_v_calibration.html#a2800d262317e42abf31bb0d48a8beadf',1,'filter::LaserNAVCalibration']]]
+  ['plot',['plot',['../classfilter_1_1_laser_n_a_v_calibration.html#a79deea4c41743f305419f8bc41f91128',1,'filter::LaserNAVCalibration']]],
+  ['print',['print',['../classfilter_1_1_laser_n_a_v_calibration.html#ac961c40f13b1868b265d81b3ce66c242',1,'filter::LaserNAVCalibration::print(double pos_x, double pos_y, double pos_z, double phi, double theta, double psi, std::string name=&quot;Transformation&quot;)'],['../classfilter_1_1_laser_n_a_v_calibration.html#aa0ec98d58d4eadb29613c6d72ffe81c8',1,'filter::LaserNAVCalibration::print(Eigen::Affine3d *transformation_to_print, std::string name=&quot;Transformation&quot;)'],['../classfilter_1_1_laser_n_a_v_calibration.html#a99e6c0fa4ad02936f498d063999c770e',1,'filter::LaserNAVCalibration::print(Eigen::Matrix4d *transformation_to_print, std::string name=&quot;Transformation&quot;)']]]
 ];

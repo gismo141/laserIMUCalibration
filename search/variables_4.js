@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iterations',['iterations',['../laser_n_a_v_calib_8cpp.html#a49884a390fe5592f17ab6795b728d63c',1,'laserNAVCalib.cpp']]]
+  ['epsilon',['epsilon',['../structlm__control__struct.html#aafab6f965c14e7dd7784ab19e3755a7f',1,'lm_control_struct']]]
 ];

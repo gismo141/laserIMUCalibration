@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update',['update',['../classfilter_1_1_laser_n_a_v_calibration.html#aed26ad6b12cf877d3d2edf9e482f30bd',1,'filter::LaserNAVCalibration']]]
+  ['resetdataset',['resetDataSet',['../classfilter_1_1_laser_n_a_v_calibration.html#a893ea3e0cfb8c8daafd81aa8302c1db5',1,'filter::LaserNAVCalibration']]]
 ];

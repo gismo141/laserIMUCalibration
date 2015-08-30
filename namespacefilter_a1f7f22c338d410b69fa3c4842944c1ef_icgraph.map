@@ -1,3 +1,4 @@
 <map id="filter::icp" name="filter::icp">
-<area shape="rect" id="node2" href="$namespacefilter.html#a2f75a4eae842e965ce75e1e141c387aa" title="Calls the pcl iterativeClosestPoint&#45;algorithm levenberg&#45;marquardt alternative (internally) ..." alt="" coords="124,5,214,31"/>
+<area shape="rect" id="node2" href="$classfilter_1_1_laser_n_a_v_calibration.html#abf8d5ca15824f371e009339dcec5e047" title="Retrieves the transformation from last to latest point&#45;cloud. " alt="" coords="262,5,460,44"/>
+<area shape="rect" id="node3" href="$namespacefilter.html#a2f75a4eae842e965ce75e1e141c387aa" title="Calls the pcl iterativeClosestPoint&#45;algorithm levenberg&#45;marquardt alternative (internally) ..." alt="" coords="124,37,214,63"/>
 </map>

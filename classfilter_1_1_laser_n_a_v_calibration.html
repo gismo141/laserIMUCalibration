@@ -113,7 +113,11 @@ $(document).ready(function(){initNavTree('classfilter_1_1_laser_n_a_v_calibratio
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">filter::LaserNAVCalibration Class Reference</div>  </div>
 </div><!--header-->
@@ -134,7 +138,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad3005aab940121887d2d7258010085ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ad3005aab940121887d2d7258010085ab">LaserNAVCalibration</a> (double pos_x=0.0, double pos_y=0.0, double pos_z=0.0, double phi=<a class="el" href="namespacemath.html#a95e8942ad6e269e1eb27e6a3c6be179b">math::c_DEG_TO_RAD</a> *0.0, double theta=<a class="el" href="namespacemath.html#a95e8942ad6e269e1eb27e6a3c6be179b">math::c_DEG_TO_RAD</a> *0.0, double psi=<a class="el" href="namespacemath.html#a95e8942ad6e269e1eb27e6a3c6be179b">math::c_DEG_TO_RAD</a> *0.0)</td></tr>
+<tr class="memitem:ad3005aab940121887d2d7258010085ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ad3005aab940121887d2d7258010085ab">LaserNAVCalibration</a> (double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#adfed244715234afdd2de910b91dc6d2f">pos_x</a>=0.0, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a3b8f5d790ba7837aab229d1d56e22ec0">pos_y</a>=0.0, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac5929f3438347a63a7192ffcf0938bc8">pos_z</a>=0.0, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aa8d9f874b4f56273c4f440953d73468f">phi</a>=<a class="el" href="namespacemath.html#a95e8942ad6e269e1eb27e6a3c6be179b">math::c_DEG_TO_RAD</a> *0.0, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a53b618a663c668051a8a8c282a0c986f">theta</a>=<a class="el" href="namespacemath.html#a95e8942ad6e269e1eb27e6a3c6be179b">math::c_DEG_TO_RAD</a> *0.0, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ad8466b0dd95af6eb064a68af4137eb70">psi</a>=<a class="el" href="namespacemath.html#a95e8942ad6e269e1eb27e6a3c6be179b">math::c_DEG_TO_RAD</a> *0.0)</td></tr>
 <tr class="memdesc:ad3005aab940121887d2d7258010085ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">std. ctor.  <a href="#ad3005aab940121887d2d7258010085ab">More...</a><br /></td></tr>
 <tr class="separator:ad3005aab940121887d2d7258010085ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a159cb06196e63e1bfa2305991f836d7b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a159cb06196e63e1bfa2305991f836d7b">~LaserNAVCalibration</a> ()</td></tr>
@@ -185,12 +189,141 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab941ea01224c5e9ba49315a38ced2e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ab941ea01224c5e9ba49315a38ced2e25">optimizeDataSet</a> (void)</td></tr>
 <tr class="memdesc:ab941ea01224c5e9ba49315a38ced2e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the worst-pair according to its ICP-fitness-score.  <a href="#ab941ea01224c5e9ba49315a38ced2e25">More...</a><br /></td></tr>
 <tr class="separator:ab941ea01224c5e9ba49315a38ced2e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2800d262317e42abf31bb0d48a8beadf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2800d262317e42abf31bb0d48a8beadf">setScansBetweenLastAndLatest</a> (unsigned int scans_between_last_and_latest)</td></tr>
+<tr class="memitem:a2800d262317e42abf31bb0d48a8beadf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2800d262317e42abf31bb0d48a8beadf">setScansBetweenLastAndLatest</a> (unsigned int <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a85f882380fad70371944cb59aa8abc48">scans_between_last_and_latest</a>)</td></tr>
 <tr class="memdesc:a2800d262317e42abf31bb0d48a8beadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of scans to skip between one registration.  <a href="#a2800d262317e42abf31bb0d48a8beadf">More...</a><br /></td></tr>
 <tr class="separator:a2800d262317e42abf31bb0d48a8beadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed26ad6b12cf877d3d2edf9e482f30bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aed26ad6b12cf877d3d2edf9e482f30bd">update</a> (pointCloud::Ptr cloud_to_draw)</td></tr>
+<tr class="memitem:aed26ad6b12cf877d3d2edf9e482f30bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aed26ad6b12cf877d3d2edf9e482f30bd">update</a> (pointCloud::Ptr <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac7bd969b38ceea3e17d61d2d3f97f296">cloud_to_draw</a>)</td></tr>
 <tr class="memdesc:aed26ad6b12cf877d3d2edf9e482f30bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the mounting-pose using Levenberg-Marquardt non-linear optimization.  <a href="#aed26ad6b12cf877d3d2edf9e482f30bd">More...</a><br /></td></tr>
 <tr class="separator:aed26ad6b12cf877d3d2edf9e482f30bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac961c40f13b1868b265d81b3ce66c242"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac961c40f13b1868b265d81b3ce66c242">print</a> (double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#adfed244715234afdd2de910b91dc6d2f">pos_x</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a3b8f5d790ba7837aab229d1d56e22ec0">pos_y</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac5929f3438347a63a7192ffcf0938bc8">pos_z</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aa8d9f874b4f56273c4f440953d73468f">phi</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a53b618a663c668051a8a8c282a0c986f">theta</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ad8466b0dd95af6eb064a68af4137eb70">psi</a>, std::string name=&quot;Transformation&quot;)</td></tr>
+<tr class="memdesc:ac961c40f13b1868b265d81b3ce66c242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the given transformation on command-line-interface.  <a href="#ac961c40f13b1868b265d81b3ce66c242">More...</a><br /></td></tr>
+<tr class="separator:ac961c40f13b1868b265d81b3ce66c242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ec98d58d4eadb29613c6d72ffe81c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aa0ec98d58d4eadb29613c6d72ffe81c8">print</a> (Eigen::Affine3d *transformation_to_print, std::string name=&quot;Transformation&quot;)</td></tr>
+<tr class="memdesc:aa0ec98d58d4eadb29613c6d72ffe81c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the given transformation on command-line-interface.  <a href="#aa0ec98d58d4eadb29613c6d72ffe81c8">More...</a><br /></td></tr>
+<tr class="separator:aa0ec98d58d4eadb29613c6d72ffe81c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e6c0fa4ad02936f498d063999c770e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a99e6c0fa4ad02936f498d063999c770e">print</a> (Eigen::Matrix4d *transformation_to_print, std::string name=&quot;Transformation&quot;)</td></tr>
+<tr class="memdesc:a99e6c0fa4ad02936f498d063999c770e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the given transformation on command-line-interface.  <a href="#a99e6c0fa4ad02936f498d063999c770e">More...</a><br /></td></tr>
+<tr class="separator:a99e6c0fa4ad02936f498d063999c770e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a9fb62da4de078cd0d744fb266dddf0b7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a9fb62da4de078cd0d744fb266dddf0b7">exists</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a9fb62da4de078cd0d744fb266dddf0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given filename-at-path exists.  <a href="#a9fb62da4de078cd0d744fb266dddf0b7">More...</a><br /></td></tr>
+<tr class="separator:a9fb62da4de078cd0d744fb266dddf0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79deea4c41743f305419f8bc41f91128"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a79deea4c41743f305419f8bc41f91128">plot</a> (std::string header, std::string data, std::string <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a1cad47113edb244975964e2f2b55f7f8">filename</a>)</td></tr>
+<tr class="memdesc:a79deea4c41743f305419f8bc41f91128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the given header + data to file.  <a href="#a79deea4c41743f305419f8bc41f91128">More...</a><br /></td></tr>
+<tr class="separator:a79deea4c41743f305419f8bc41f91128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8d5ca15824f371e009339dcec5e047"><td class="memItemLeft" align="right" valign="top">static Eigen::Matrix4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#abf8d5ca15824f371e009339dcec5e047">getScanTransformationFrom</a> (pointCloud::Ptr <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2ef3cd1cf3fe62f72d7732e0920e1af2">last</a>, pointCloud::Ptr <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a86971517cb037dea225d3c26a2274764">latest</a>, double *icp_fitness_score, double <a class="el" href="laser_n_a_v_calib_8cpp.html#a49884a390fe5592f17ab6795b728d63c">iterations</a>)</td></tr>
+<tr class="memdesc:abf8d5ca15824f371e009339dcec5e047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the transformation from last to latest point-cloud.  <a href="#abf8d5ca15824f371e009339dcec5e047">More...</a><br /></td></tr>
+<tr class="separator:abf8d5ca15824f371e009339dcec5e047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732811f2fdb404bddf57a41ab86eab92"><td class="memItemLeft" align="right" valign="top">static Eigen::Matrix4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a732811f2fdb404bddf57a41ab86eab92">getMovementFrom</a> (pointCloud::Ptr <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2ef3cd1cf3fe62f72d7732e0920e1af2">last</a>, pointCloud::Ptr <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a86971517cb037dea225d3c26a2274764">latest</a>)</td></tr>
+<tr class="memdesc:a732811f2fdb404bddf57a41ab86eab92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the movement of the Navigation-Data between the last and latest point-cloud.  <a href="#a732811f2fdb404bddf57a41ab86eab92">More...</a><br /></td></tr>
+<tr class="separator:a732811f2fdb404bddf57a41ab86eab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5693e241cf2eca58c3a93c94c1127bd7"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a5693e241cf2eca58c3a93c94c1127bd7">evaluateICPFitnessScore</a> (pointCloud::Ptr first, pointCloud::Ptr second, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#adfed244715234afdd2de910b91dc6d2f">pos_x</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a3b8f5d790ba7837aab229d1d56e22ec0">pos_y</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac5929f3438347a63a7192ffcf0938bc8">pos_z</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aa8d9f874b4f56273c4f440953d73468f">phi</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a53b618a663c668051a8a8c282a0c986f">theta</a>, double <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ad8466b0dd95af6eb064a68af4137eb70">psi</a>)</td></tr>
+<tr class="separator:a5693e241cf2eca58c3a93c94c1127bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06ae8f4d4d84aa6b9a1e79fa9900061"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac06ae8f4d4d84aa6b9a1e79fa9900061">getMountingPose</a> (const double *par, int m_dat, const void *data, double *fvec, int *info)</td></tr>
+<tr class="memdesc:ac06ae8f4d4d84aa6b9a1e79fa9900061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimized the mounting-pose as part of the Levenberg-Marquardt.  <a href="#ac06ae8f4d4d84aa6b9a1e79fa9900061">More...</a><br /></td></tr>
+<tr class="separator:ac06ae8f4d4d84aa6b9a1e79fa9900061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a77760f58766a842de2a7c5a452f70bf2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a77760f58766a842de2a7c5a452f70bf2">sampled_scans</a></td></tr>
+<tr class="memdesc:a77760f58766a842de2a7c5a452f70bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the number of all sampled scans.  <a href="#a77760f58766a842de2a7c5a452f70bf2">More...</a><br /></td></tr>
+<tr class="separator:a77760f58766a842de2a7c5a452f70bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff75f0cdfa63528ae2f01c6f9a931b92"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aff75f0cdfa63528ae2f01c6f9a931b92">scan_counter</a></td></tr>
+<tr class="memdesc:aff75f0cdfa63528ae2f01c6f9a931b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the scans between last and latest point-cloud.  <a href="#aff75f0cdfa63528ae2f01c6f9a931b92">More...</a><br /></td></tr>
+<tr class="separator:aff75f0cdfa63528ae2f01c6f9a931b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ee474475e1b7f3d8214d2c5d86bfd3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a37ee474475e1b7f3d8214d2c5d86bfd3">plot_all_movements</a></td></tr>
+<tr class="memdesc:a37ee474475e1b7f3d8214d2c5d86bfd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check all scans and plot all movements to a file.  <a href="#a37ee474475e1b7f3d8214d2c5d86bfd3">More...</a><br /></td></tr>
+<tr class="separator:a37ee474475e1b7f3d8214d2c5d86bfd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb8d0d4241f39338fde876418ac0464"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a0eb8d0d4241f39338fde876418ac0464">calibration_wanted</a></td></tr>
+<tr class="memdesc:a0eb8d0d4241f39338fde876418ac0464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to true when calibration is wanted.  <a href="#a0eb8d0d4241f39338fde876418ac0464">More...</a><br /></td></tr>
+<tr class="separator:a0eb8d0d4241f39338fde876418ac0464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a69fa3c529c2f95ab1e0ec2e7ceeea6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a6a69fa3c529c2f95ab1e0ec2e7ceeea6">mounting_pose</a> [<a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac1edfff0095202c938120e58fa140dc1">nr_unknowns</a>]</td></tr>
+<tr class="memdesc:a6a69fa3c529c2f95ab1e0ec2e7ceeea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data-array used by the Levenberg-Marquardt lmmin-optimizer.  <a href="#a6a69fa3c529c2f95ab1e0ec2e7ceeea6">More...</a><br /></td></tr>
+<tr class="separator:a6a69fa3c529c2f95ab1e0ec2e7ceeea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfed244715234afdd2de910b91dc6d2f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#adfed244715234afdd2de910b91dc6d2f">pos_x</a></td></tr>
+<tr class="memdesc:adfed244715234afdd2de910b91dc6d2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-wide latest position (this is <b>altered after</b> optimization)  <a href="#adfed244715234afdd2de910b91dc6d2f">More...</a><br /></td></tr>
+<tr class="separator:adfed244715234afdd2de910b91dc6d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b8f5d790ba7837aab229d1d56e22ec0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a3b8f5d790ba7837aab229d1d56e22ec0">pos_y</a></td></tr>
+<tr class="separator:a3b8f5d790ba7837aab229d1d56e22ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5929f3438347a63a7192ffcf0938bc8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac5929f3438347a63a7192ffcf0938bc8">pos_z</a></td></tr>
+<tr class="separator:ac5929f3438347a63a7192ffcf0938bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d9f874b4f56273c4f440953d73468f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aa8d9f874b4f56273c4f440953d73468f">phi</a></td></tr>
+<tr class="separator:aa8d9f874b4f56273c4f440953d73468f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b618a663c668051a8a8c282a0c986f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a53b618a663c668051a8a8c282a0c986f">theta</a></td></tr>
+<tr class="separator:a53b618a663c668051a8a8c282a0c986f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8466b0dd95af6eb064a68af4137eb70"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ad8466b0dd95af6eb064a68af4137eb70">psi</a></td></tr>
+<tr class="separator:ad8466b0dd95af6eb064a68af4137eb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bd969b38ceea3e17d61d2d3f97f296"><td class="memItemLeft" align="right" valign="top">pointCloud::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac7bd969b38ceea3e17d61d2d3f97f296">cloud_to_draw</a></td></tr>
+<tr class="memdesc:ac7bd969b38ceea3e17d61d2d3f97f296"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cloud-ptr provided by another source (work is based on this)  <a href="#ac7bd969b38ceea3e17d61d2d3f97f296">More...</a><br /></td></tr>
+<tr class="separator:ac7bd969b38ceea3e17d61d2d3f97f296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef3cd1cf3fe62f72d7732e0920e1af2"><td class="memItemLeft" align="right" valign="top">pointCloud::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2ef3cd1cf3fe62f72d7732e0920e1af2">last</a></td></tr>
+<tr class="memdesc:a2ef3cd1cf3fe62f72d7732e0920e1af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloud-ptr that stores the last point-cloud.  <a href="#a2ef3cd1cf3fe62f72d7732e0920e1af2">More...</a><br /></td></tr>
+<tr class="separator:a2ef3cd1cf3fe62f72d7732e0920e1af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86971517cb037dea225d3c26a2274764"><td class="memItemLeft" align="right" valign="top">pointCloud::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a86971517cb037dea225d3c26a2274764">latest</a></td></tr>
+<tr class="memdesc:a86971517cb037dea225d3c26a2274764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloud-ptr that stores the latest point-cloud.  <a href="#a86971517cb037dea225d3c26a2274764">More...</a><br /></td></tr>
+<tr class="separator:a86971517cb037dea225d3c26a2274764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca84975f54898ccc078f6ddcd794c254"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="laser_n_a_v_calib_8h.html#ade0a92113644ad4c8717c82a5dcd3529">last_and_latest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aca84975f54898ccc078f6ddcd794c254">data_set</a></td></tr>
+<tr class="memdesc:aca84975f54898ccc078f6ddcd794c254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the data-set of point-cloud-pairs (known as key-sequences in the thesis)  <a href="#aca84975f54898ccc078f6ddcd794c254">More...</a><br /></td></tr>
+<tr class="separator:aca84975f54898ccc078f6ddcd794c254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afb0b880aa5636daaa83524401c25a2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2afb0b880aa5636daaa83524401c25a2">nr_scan_pairs</a></td></tr>
+<tr class="memdesc:a2afb0b880aa5636daaa83524401c25a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds the number of elements in the data-set (std::vector.size() takes too long)  <a href="#a2afb0b880aa5636daaa83524401c25a2">More...</a><br /></td></tr>
+<tr class="separator:a2afb0b880aa5636daaa83524401c25a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd1f603a91f9488f4ed244c6c999d7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a0fd1f603a91f9488f4ed244c6c999d7d">add_to_data_set</a></td></tr>
+<tr class="memdesc:a0fd1f603a91f9488f4ed244c6c999d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to true on button press when the user requested to add a data-set to the key-sequences.  <a href="#a0fd1f603a91f9488f4ed244c6c999d7d">More...</a><br /></td></tr>
+<tr class="separator:a0fd1f603a91f9488f4ed244c6c999d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb3bbdfb387055ada2c03947e7130c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a0fb3bbdfb387055ada2c03947e7130c0">init</a></td></tr>
+<tr class="memdesc:a0fb3bbdfb387055ada2c03947e7130c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the optimization-array for the Levenberg-Marquardt using ctor. given parameters.  <a href="#a0fb3bbdfb387055ada2c03947e7130c0">More...</a><br /></td></tr>
+<tr class="separator:a0fb3bbdfb387055ada2c03947e7130c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cad47113edb244975964e2f2b55f7f8"><td class="memItemLeft" align="right" valign="top">std::stringstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a1cad47113edb244975964e2f2b55f7f8">filename</a></td></tr>
+<tr class="memdesc:a1cad47113edb244975964e2f2b55f7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable to store a class-wide filename (can be used to group different plots according to a naming scheme)  <a href="#a1cad47113edb244975964e2f2b55f7f8">More...</a><br /></td></tr>
+<tr class="separator:a1cad47113edb244975964e2f2b55f7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ac1edfff0095202c938120e58fa140dc1"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac1edfff0095202c938120e58fa140dc1">nr_unknowns</a> = 6</td></tr>
+<tr class="memdesc:ac1edfff0095202c938120e58fa140dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of unknowns.  <a href="#ac1edfff0095202c938120e58fa140dc1">More...</a><br /></td></tr>
+<tr class="separator:ac1edfff0095202c938120e58fa140dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f882380fad70371944cb59aa8abc48"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a85f882380fad70371944cb59aa8abc48">scans_between_last_and_latest</a> = 10</td></tr>
+<tr class="memdesc:a85f882380fad70371944cb59aa8abc48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of scans between point-cloud-pairs (those are simply dropped)  <a href="#a85f882380fad70371944cb59aa8abc48">More...</a><br /></td></tr>
+<tr class="separator:a85f882380fad70371944cb59aa8abc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609c2d0f6eb5db42e1b8e9b62b30bcc7"><td class="memItemLeft" align="right" valign="top">static pointCloud::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a609c2d0f6eb5db42e1b8e9b62b30bcc7">last_to_draw</a></td></tr>
+<tr class="memdesc:a609c2d0f6eb5db42e1b8e9b62b30bcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloud-ptr that stores the last point-cloud that will be drawn (stable, switched after registration-process)  <a href="#a609c2d0f6eb5db42e1b8e9b62b30bcc7">More...</a><br /></td></tr>
+<tr class="separator:a609c2d0f6eb5db42e1b8e9b62b30bcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14fa75008e4db14c242f614169dae98c"><td class="memItemLeft" align="right" valign="top">static pointCloud::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a14fa75008e4db14c242f614169dae98c">latest_to_draw</a></td></tr>
+<tr class="memdesc:a14fa75008e4db14c242f614169dae98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloud-ptr that stores the latest point-cloud that will be drawn (stable, switched after registration-process)  <a href="#a14fa75008e4db14c242f614169dae98c">More...</a><br /></td></tr>
+<tr class="separator:a14fa75008e4db14c242f614169dae98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8a2303e0cca6351ff6336a8af77ea0c"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac8a2303e0cca6351ff6336a8af77ea0c">worst_pair</a> = 0</td></tr>
+<tr class="memdesc:ac8a2303e0cca6351ff6336a8af77ea0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the point-cloud-pair with the worst ICP-fitness-score.  <a href="#ac8a2303e0cca6351ff6336a8af77ea0c">More...</a><br /></td></tr>
+<tr class="separator:ac8a2303e0cca6351ff6336a8af77ea0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce002d0dac6197f21a28c64d6de18f4"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a8ce002d0dac6197f21a28c64d6de18f4">worst_score</a> = 0.0</td></tr>
+<tr class="memdesc:a8ce002d0dac6197f21a28c64d6de18f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the worst ICP-fitness-score for the according point-cloud-pair.  <a href="#a8ce002d0dac6197f21a28c64d6de18f4">More...</a><br /></td></tr>
+<tr class="separator:a8ce002d0dac6197f21a28c64d6de18f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab362cf9338d3ad4ccff67a45f7de379d"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ab362cf9338d3ad4ccff67a45f7de379d">avr_cal_err</a> = 0.0</td></tr>
+<tr class="memdesc:ab362cf9338d3ad4ccff67a45f7de379d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mean of the summed ICP-fitness-score's (updated each iteration)  <a href="#ab362cf9338d3ad4ccff67a45f7de379d">More...</a><br /></td></tr>
+<tr class="separator:ab362cf9338d3ad4ccff67a45f7de379d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7429b722270193616bc9d0af7896dc6c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2da596516a28af024ba1b80bbe8a39ee">e_registrationMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a7429b722270193616bc9d0af7896dc6c">ICPMethod</a> = <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2da596516a28af024ba1b80bbe8a39eea17318d5c36bce5d3de6d65eed294ad5f">filter::LaserNAVCalibration::E_LEVENBERG_MARQUARDT</a></td></tr>
+<tr class="memdesc:a7429b722270193616bc9d0af7896dc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selector for the calibration-method (not supported atm)  <a href="#a7429b722270193616bc9d0af7896dc6c">More...</a><br /></td></tr>
+<tr class="separator:a7429b722270193616bc9d0af7896dc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6b80179d0d129195ea7ba576ed62de"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a9c6b80179d0d129195ea7ba576ed62de">downsampling</a> = false</td></tr>
+<tr class="memdesc:a9c6b80179d0d129195ea7ba576ed62de"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true: all point-clouds are downsampled using Voxel-Grids.  <a href="#a9c6b80179d0d129195ea7ba576ed62de">More...</a><br /></td></tr>
+<tr class="separator:a9c6b80179d0d129195ea7ba576ed62de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2349925c22fcc10f49ab21913d7527a8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2349925c22fcc10f49ab21913d7527a8">bilateral_filtering</a> = false</td></tr>
+<tr class="memdesc:a2349925c22fcc10f49ab21913d7527a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true: bilateral-filtering is used (computes fpfh-features!)  <a href="#a2349925c22fcc10f49ab21913d7527a8">More...</a><br /></td></tr>
+<tr class="separator:a2349925c22fcc10f49ab21913d7527a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1146ff254abff493261eff474c4ba965"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a1146ff254abff493261eff474c4ba965">calculate_normals</a> = false</td></tr>
+<tr class="memdesc:a1146ff254abff493261eff474c4ba965"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true: calculate normals (basis for covariance-sampling and initial-alignment)  <a href="#a1146ff254abff493261eff474c4ba965">More...</a><br /></td></tr>
+<tr class="separator:a1146ff254abff493261eff474c4ba965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd44904eb85bed3000b59b233430cdc4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#afd44904eb85bed3000b59b233430cdc4">covariance_sampling</a> = false</td></tr>
+<tr class="memdesc:afd44904eb85bed3000b59b233430cdc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true: Samples the point-cloud using covariance-matrices.  <a href="#afd44904eb85bed3000b59b233430cdc4">More...</a><br /></td></tr>
+<tr class="separator:afd44904eb85bed3000b59b233430cdc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebaf92d203aa062382c6ee4e1b0baca4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aebaf92d203aa062382c6ee4e1b0baca4">initial_aligning</a> = false</td></tr>
+<tr class="memdesc:aebaf92d203aa062382c6ee4e1b0baca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true: Initial Alignment is calculated using Sample-Consensus (<b>untested</b>)  <a href="#aebaf92d203aa062382c6ee4e1b0baca4">More...</a><br /></td></tr>
+<tr class="separator:aebaf92d203aa062382c6ee4e1b0baca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Filter to calibrate the Laser mounting Pose according to NAV-data. </p>
@@ -344,6 +477,121 @@ Collaboration diagram for filter::LaserNAVCalibration:</div>
 
 </div>
 </div>
+<a class="anchor" id="a5693e241cf2eca58c3a93c94c1127bd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::evaluateICPFitnessScore </td>
+          <td>(</td>
+          <td class="paramtype">pointCloud::Ptr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pointCloud::Ptr&#160;</td>
+          <td class="paramname"><em>second</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pos_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pos_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pos_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>phi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>psi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00265">265</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9fb62da4de078cd0d744fb266dddf0b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::exists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the given filename-at-path exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The path + filename </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><table class="doxtable">
+<tr>
+<th align="left">value </th><th align="left">meaning  </th></tr>
+<tr>
+<td align="left">true </td><td align="left">file exists </td></tr>
+<tr>
+<td align="left">false </td><td align="left">file does not exist </td></tr>
+</table>
+</dd></dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00129">129</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2075eaeaa2bd1a62d7408cb824e93fd0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -491,6 +739,209 @@ Collaboration diagram for filter::LaserNAVCalibration:</div>
 
 </div>
 </div>
+<a class="anchor" id="ac06ae8f4d4d84aa6b9a1e79fa9900061"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void filter::LaserNAVCalibration::getMountingPose </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>par</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m_dat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>fvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optimized the mounting-pose as part of the Levenberg-Marquardt. </p>
+<p>DO NOT CALL THIS METHOD YOURSELF! Create an instance of math::lmmin as shown in <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aed26ad6b12cf877d3d2edf9e482f30bd" title="Updates the mounting-pose using Levenberg-Marquardt non-linear optimization. ">update()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">par</td><td>pos_x, pos_y, pos_z, phi, theta, psi that will be optimised </td></tr>
+    <tr><td class="paramname">m_dat</td><td>NOT USED BY THIS FUNCTION </td></tr>
+    <tr><td class="paramname">data</td><td>the vector of selected point-cloud-pairs </td></tr>
+    <tr><td class="paramname">fvec</td><td>Error-vector (used to store the new ICP-fitness-scores) </td></tr>
+    <tr><td class="paramname">info</td><td>NOT USED BY THIS FUNCTION </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00305">305</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfilter_1_1_laser_n_a_v_calibration_ac06ae8f4d4d84aa6b9a1e79fa9900061_icgraph.png" border="0" usemap="#classfilter_1_1_laser_n_a_v_calibration_ac06ae8f4d4d84aa6b9a1e79fa9900061_icgraph" alt=""/></div>
+<map name="classfilter_1_1_laser_n_a_v_calibration_ac06ae8f4d4d84aa6b9a1e79fa9900061_icgraph" id="classfilter_1_1_laser_n_a_v_calibration_ac06ae8f4d4d84aa6b9a1e79fa9900061_icgraph">
+<area shape="rect" id="node2" href="classfilter_1_1_laser_n_a_v_calibration.html#aed26ad6b12cf877d3d2edf9e482f30bd" title="Updates the mounting&#45;pose using Levenberg&#45;Marquardt non&#45;linear optimization. " alt="" coords="231,5,408,44"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="456,12,506,37"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a732811f2fdb404bddf57a41ab86eab92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix4d filter::LaserNAVCalibration::getMovementFrom </td>
+          <td>(</td>
+          <td class="paramtype">pointCloud::Ptr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pointCloud::Ptr&#160;</td>
+          <td class="paramname"><em>latest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the movement of the Navigation-Data between the last and latest point-cloud. </p>
+<p>No data will be altered internally (just subtraction of coordinates and angles)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">last</td><td>PointCloud::Ptr to the first point-cloud </td></tr>
+    <tr><td class="paramname">latest</td><td>PointCloud::Ptr to the second point-cloud</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The movement transformation from last to latest </dd></dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00168">168</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf8d5ca15824f371e009339dcec5e047"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix4d filter::LaserNAVCalibration::getScanTransformationFrom </td>
+          <td>(</td>
+          <td class="paramtype">pointCloud::Ptr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pointCloud::Ptr&#160;</td>
+          <td class="paramname"><em>latest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>icp_fitness_score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>iterations</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the transformation from last to latest point-cloud. </p>
+<p>Calls the filtering functions inside if the according boolean is set. ATTENTION! When filtering functions are activated, the clouds will be altered!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">last</td><td>PointCloud::Ptr to the first point-cloud </td></tr>
+    <tr><td class="paramname">latest</td><td>PointCloud::Ptr to the second point-cloud </td></tr>
+    <tr><td class="paramname">icp_fitness_score</td><td>The variable where the resulting score should be stored </td></tr>
+    <tr><td class="paramname">iterations</td><td>Number of iterations the ICP should pass in order to refine the transformation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The scan transformation from last to latest </dd></dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00212">212</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfilter_1_1_laser_n_a_v_calibration_abf8d5ca15824f371e009339dcec5e047_cgraph.png" border="0" usemap="#classfilter_1_1_laser_n_a_v_calibration_abf8d5ca15824f371e009339dcec5e047_cgraph" alt=""/></div>
+<map name="classfilter_1_1_laser_n_a_v_calibration_abf8d5ca15824f371e009339dcec5e047_cgraph" id="classfilter_1_1_laser_n_a_v_calibration_abf8d5ca15824f371e009339dcec5e047_cgraph">
+<area shape="rect" id="node2" href="namespacefilter.html#a27b0fbc7a35c648ec87de31f3daaf6cb" title="Simple Voxel&#45;Grid downsampling. " alt="" coords="290,5,419,31"/>
+<area shape="rect" id="node3" href="namespacefilter.html#a949c96958681d0d128f62277cb58caf5" title="Use bilateral filtering. " alt="" coords="280,55,428,80"/>
+<area shape="rect" id="node4" href="namespacefilter.html#ab418fe3942489440318998156d38f219" title="Compute the surface normals. " alt="" coords="254,104,455,129"/>
+<area shape="rect" id="node5" href="namespacefilter.html#a359fe6b0257903f751d7f6f93544aa72" title="Use covariances for downsampling. " alt="" coords="251,153,457,179"/>
+<area shape="rect" id="node6" href="namespacefilter.html#ac782fb8f7fc2cf0849a30363bae33b6a" title="Extracts all (F)PFHs. " alt="" coords="278,203,430,241"/>
+<area shape="rect" id="node7" href="namespacefilter.html#a2374739be2b3d046774a6d06a859a779" title="Aligns the point&#45;clouds initially using Sample Consensus. " alt="" coords="282,265,426,291"/>
+<area shape="rect" id="node8" href="namespacefilter.html#a1f7f22c338d410b69fa3c4842944c1ef" title="Calls the pcl iterativeClosestPoint&#45;algorithm. " alt="" coords="505,341,576,367"/>
+<area shape="rect" id="node9" href="namespacefilter.html#a2f75a4eae842e965ce75e1e141c387aa" title="Calls the pcl iterativeClosestPoint&#45;algorithm levenberg&#45;marquardt alternative (internally) ..." alt="" coords="309,367,399,392"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="ab941ea01224c5e9ba49315a38ced2e25"></a>
 <div class="memitem">
 <div class="memproto">
@@ -508,6 +959,232 @@ Collaboration diagram for filter::LaserNAVCalibration:</div>
 <p>Deletes the worst-pair according to its ICP-fitness-score. </p>
 
 <p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00429">429</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a79deea4c41743f305419f8bc41f91128"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void filter::LaserNAVCalibration::plot </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plot the given header + data to file. </p>
+<p>Checks if the given filename exists: </p><pre class="fragment">     - **true** the data will be appended,
+     - **false** a new file is created, the header + data will be added and file is closed
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>The formatted header (use the <b>same separators</b> as in data!) </td></tr>
+    <tr><td class="paramname">data</td><td>The formatted data (use the <b>same separators</b> as in header) </td></tr>
+    <tr><td class="paramname">filename</td><td>The name and the path where the file should be stored </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00137">137</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac961c40f13b1868b265d81b3ce66c242"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void filter::LaserNAVCalibration::print </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pos_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pos_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pos_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>phi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>psi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;Transformation&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the given transformation on command-line-interface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_x</td><td>The x-coordinate </td></tr>
+    <tr><td class="paramname">pos_y</td><td>The y-coordinate </td></tr>
+    <tr><td class="paramname">pos_z</td><td>The z-coordinate </td></tr>
+    <tr><td class="paramname">phi</td><td>The Euler-angel around x-axis (input in rad, output in degree) </td></tr>
+    <tr><td class="paramname">theta</td><td>The Euler-angle around y-axis (input in rad, output in degree) </td></tr>
+    <tr><td class="paramname">psi</td><td>The Euler-angle around z-axis (input in rad, output in degree) </td></tr>
+    <tr><td class="paramname">name</td><td>Name that is prepended to the output (great to differentiate multiple prints) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00091">91</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa0ec98d58d4eadb29613c6d72ffe81c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void filter::LaserNAVCalibration::print </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Affine3d *&#160;</td>
+          <td class="paramname"><em>transformation_to_print</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;Transformation&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the given transformation on command-line-interface. </p>
+<p>Calls print(Eigen::Matrix4d,...)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transformation_to_print</td><td>The transformation to print </td></tr>
+    <tr><td class="paramname">name</td><td>Name that is prepended to the output (great to differentiate multiple prints) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00110">110</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a99e6c0fa4ad02936f498d063999c770e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void filter::LaserNAVCalibration::print </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Matrix4d *&#160;</td>
+          <td class="paramname"><em>transformation_to_print</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;Transformation&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the given transformation on command-line-interface. </p>
+<p>Calls print(pos_x, pos_y,...)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transformation_to_print</td><td>The transformation to print </td></tr>
+    <tr><td class="paramname">name</td><td>Name that is prepended to the output (great to differentiate multiple prints) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8cpp_source.html#l00118">118</a> of file <a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a>.</p>
 
 </div>
 </div>
@@ -736,12 +1413,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classfilter_1_1_laser_n_a_v_calibration_aed26ad6b12cf877d3d2edf9e482f30bd_cgraph.png" border="0" usemap="#classfilter_1_1_laser_n_a_v_calibration_aed26ad6b12cf877d3d2edf9e482f30bd_cgraph" alt=""/></div>
 <map name="classfilter_1_1_laser_n_a_v_calibration_aed26ad6b12cf877d3d2edf9e482f30bd_cgraph" id="classfilter_1_1_laser_n_a_v_calibration_aed26ad6b12cf877d3d2edf9e482f30bd_cgraph">
-<area shape="rect" id="node2" href="lmmin_8c.html#a82fc1e216d4f18aa79db07a8528fc581" title="Levenberg&#45;Marquardt minimization. " alt="" coords="231,54,288,80"/>
-<area shape="rect" id="node3" href="lmmin_8c.html#af783493b9875c983d0234f9b170c476b" title="Refined calculation of Eucledian norm. " alt="" coords="486,78,566,104"/>
-<area shape="rect" id="node4" href="lmmin_8c.html#ac41fd3078587553ec6e990362d78f114" title="lm_print_pars" alt="" coords="336,29,438,54"/>
-<area shape="rect" id="node5" href="lmmin_8c.html#aa91e8d8bef32a26b967d117801308566" title="[brief description] " alt="" coords="350,78,423,104"/>
-<area shape="rect" id="node6" href="lmmin_8c.html#a41ff931f50f8eaa282b7fe5fbc035030" title="[brief description] " alt="" coords="349,128,425,153"/>
-<area shape="rect" id="node7" href="lmmin_8c.html#a0543234dc4a8534dffcec238a778916a" title="[brief description] " alt="" coords="487,128,565,153"/>
+<area shape="rect" id="node2" href="lmmin_8c.html#a82fc1e216d4f18aa79db07a8528fc581" title="Levenberg&#45;Marquardt minimization. " alt="" coords="291,52,348,77"/>
+<area shape="rect" id="node8" href="classfilter_1_1_laser_n_a_v_calibration.html#ac06ae8f4d4d84aa6b9a1e79fa9900061" title="Optimized the mounting&#45;pose as part of the Levenberg&#45;Marquardt. " alt="" coords="231,101,408,140"/>
+<area shape="rect" id="node3" href="lmmin_8c.html#af783493b9875c983d0234f9b170c476b" title="Refined calculation of Eucledian norm. " alt="" coords="606,77,687,102"/>
+<area shape="rect" id="node4" href="lmmin_8c.html#ac41fd3078587553ec6e990362d78f114" title="lm_print_pars" alt="" coords="456,28,558,53"/>
+<area shape="rect" id="node5" href="lmmin_8c.html#aa91e8d8bef32a26b967d117801308566" title="[brief description] " alt="" coords="471,77,544,102"/>
+<area shape="rect" id="node6" href="lmmin_8c.html#a41ff931f50f8eaa282b7fe5fbc035030" title="[brief description] " alt="" coords="469,126,545,152"/>
+<area shape="rect" id="node7" href="lmmin_8c.html#a0543234dc4a8534dffcec238a778916a" title="[brief description] " alt="" coords="607,126,686,152"/>
 </map>
 </div>
 </p>
@@ -758,6 +1436,770 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="a0fd1f603a91f9488f4ed244c6c999d7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::add_to_data_set</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set to true on button press when the user requested to add a data-set to the key-sequences. </p>
+<p>Reset right after the data-set was added </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00157">157</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab362cf9338d3ad4ccff67a45f7de379d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::avr_cal_err = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mean of the summed ICP-fitness-score's (updated each iteration) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00128">128</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2349925c22fcc10f49ab21913d7527a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::bilateral_filtering = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When true: bilateral-filtering is used (computes fpfh-features!) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00140">140</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1146ff254abff493261eff474c4ba965"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::calculate_normals = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When true: calculate normals (basis for covariance-sampling and initial-alignment) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00144">144</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0eb8d0d4241f39338fde876418ac0464"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::calibration_wanted</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set to true when calibration is wanted. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00076">76</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7bd969b38ceea3e17d61d2d3f97f296"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pointCloud::Ptr filter::LaserNAVCalibration::cloud_to_draw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The cloud-ptr provided by another source (work is based on this) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00090">90</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd44904eb85bed3000b59b233430cdc4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::covariance_sampling = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When true: Samples the point-cloud using covariance-matrices. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00148">148</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca84975f54898ccc078f6ddcd794c254"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="laser_n_a_v_calib_8h.html#ade0a92113644ad4c8717c82a5dcd3529">last_and_latest</a> &gt; filter::LaserNAVCalibration::data_set</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Holds the data-set of point-cloud-pairs (known as key-sequences in the thesis) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00110">110</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c6b80179d0d129195ea7ba576ed62de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::downsampling = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When true: all point-clouds are downsampled using Voxel-Grids. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00136">136</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1cad47113edb244975964e2f2b55f7f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::stringstream filter::LaserNAVCalibration::filename</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Variable to store a class-wide filename (can be used to group different plots according to a naming scheme) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00165">165</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7429b722270193616bc9d0af7896dc6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2da596516a28af024ba1b80bbe8a39ee">filter::LaserNAVCalibration::e_registrationMethod</a> filter::LaserNAVCalibration::ICPMethod = <a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#a2da596516a28af024ba1b80bbe8a39eea17318d5c36bce5d3de6d65eed294ad5f">filter::LaserNAVCalibration::E_LEVENBERG_MARQUARDT</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Selector for the calibration-method (not supported atm) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00132">132</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0fb3bbdfb387055ada2c03947e7130c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::init</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the optimization-array for the Levenberg-Marquardt using ctor. given parameters. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00161">161</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aebaf92d203aa062382c6ee4e1b0baca4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::initial_aligning = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When true: Initial Alignment is calculated using Sample-Consensus (<b>untested</b>) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00152">152</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ef3cd1cf3fe62f72d7732e0920e1af2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pointCloud::Ptr filter::LaserNAVCalibration::last</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cloud-ptr that stores the last point-cloud. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00094">94</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a609c2d0f6eb5db42e1b8e9b62b30bcc7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pointCloud::Ptr filter::LaserNAVCalibration::last_to_draw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cloud-ptr that stores the last point-cloud that will be drawn (stable, switched after registration-process) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00102">102</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a86971517cb037dea225d3c26a2274764"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pointCloud::Ptr filter::LaserNAVCalibration::latest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cloud-ptr that stores the latest point-cloud. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00098">98</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a14fa75008e4db14c242f614169dae98c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pointCloud::Ptr filter::LaserNAVCalibration::latest_to_draw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cloud-ptr that stores the latest point-cloud that will be drawn (stable, switched after registration-process) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00106">106</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a69fa3c529c2f95ab1e0ec2e7ceeea6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::mounting_pose[<a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#ac1edfff0095202c938120e58fa140dc1">nr_unknowns</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The data-array used by the Levenberg-Marquardt lmmin-optimizer. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00081">81</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2afb0b880aa5636daaa83524401c25a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int filter::LaserNAVCalibration::nr_scan_pairs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>holds the number of elements in the data-set (std::vector.size() takes too long) </p>
+<p>not needed anymore in C++11 </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00115">115</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1edfff0095202c938120e58fa140dc1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int filter::LaserNAVCalibration::nr_unknowns = 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of unknowns. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html#aed26ad6b12cf877d3d2edf9e482f30bd" title="Updates the mounting-pose using Levenberg-Marquardt non-linear optimization. ">update()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00055">55</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8d9f874b4f56273c4f440953d73468f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::phi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00085">85</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37ee474475e1b7f3d8214d2c5d86bfd3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool filter::LaserNAVCalibration::plot_all_movements</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check all scans and plot all movements to a file. </p>
+<p>This variable is set to false, when optimization has completed (no multi-iteration) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00072">72</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfed244715234afdd2de910b91dc6d2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::pos_x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Class-wide latest position (this is <b>altered after</b> optimization) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00085">85</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b8f5d790ba7837aab229d1d56e22ec0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::pos_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00085">85</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5929f3438347a63a7192ffcf0938bc8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::pos_z</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00085">85</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8466b0dd95af6eb064a68af4137eb70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::psi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00085">85</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a77760f58766a842de2a7c5a452f70bf2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::sampled_scans</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Contains the number of all sampled scans. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00063">63</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aff75f0cdfa63528ae2f01c6f9a931b92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int filter::LaserNAVCalibration::scan_counter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Counts the scans between last and latest point-cloud. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00067">67</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85f882380fad70371944cb59aa8abc48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int filter::LaserNAVCalibration::scans_between_last_and_latest = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of scans between point-cloud-pairs (those are simply dropped) </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00059">59</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53b618a663c668051a8a8c282a0c986f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::theta</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00085">85</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8a2303e0cca6351ff6336a8af77ea0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t filter::LaserNAVCalibration::worst_pair = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Index of the point-cloud-pair with the worst ICP-fitness-score. </p>
+<p>The pair at this index will be purged from the data-set when the average-error was too bad in the optimization </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00120">120</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ce002d0dac6197f21a28c64d6de18f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double filter::LaserNAVCalibration::worst_score = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Holds the worst ICP-fitness-score for the according point-cloud-pair. </p>
+
+<p>Definition at line <a class="el" href="laser_n_a_v_calib_8h_source.html#l00124">124</a> of file <a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="laser_n_a_v_calib_8h_source.html">laserNAVCalib.h</a></li>
 <li><a class="el" href="laser_n_a_v_calib_8cpp_source.html">laserNAVCalib.cpp</a></li>
@@ -768,7 +2210,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefilter.html">filter</a></li><li class="navelem"><a class="el" href="classfilter_1_1_laser_n_a_v_calibration.html">LaserNAVCalibration</a></li>
-    <li class="footer">Generated on Sun Aug 30 2015 16:05:37 for laserIMUCalibration by
+    <li class="footer">Generated on Sun Aug 30 2015 16:11:55 for laserIMUCalibration by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
