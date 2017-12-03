@@ -41,7 +41,7 @@ brew link --force qt5 && ln -s /usr/local/Cellar/qt5/5.4.1/mkspecs /usr/local/mk
 Replace `<YOUR_DESTINATION>` with the path where you want to store the source-code (e.g. `~/Development`).
 
 ```Shell
-git clone git@github.com:gismo141/laserIMUCalibration <YOUR_DESTINATION>
+git clone https://github.com/gismo141/laserIMUCalibration.git <YOUR_DESTINATION>
 ```
 
 ```Shell
